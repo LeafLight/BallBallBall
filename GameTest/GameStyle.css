@@ -1,0 +1,63 @@
+.Random{
+    border: 2px #e0e0e0 solid;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    line-height:px;
+    font-size: 40px;
+    -webkit-animation: aRotate 1s;
+    animation: aRotate 1s;
+    left: -180px;
+    top:-200px;
+    background-color: rgba(220, 20, 160, 0.356);
+    position: relative;
+}
+.Death{
+    border: 2px #e0e0e0 solid;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    line-height:px;
+    font-size: 40px;
+    -webkit-animation: aRotate 1s;
+    animation: aRotate 1s;
+    left: -80px;
+    top:-30px;
+    background-color: rgba(220, 20, 60, 0.438);
+    position: relative;
+    transition: 1s;
+}
+
+.DivCounter{
+    width: 35px;
+    height: 20px;
+    border: none;
+    background-color: rgb(0, 255, 149,0.2);
+    float: left;
+    margin: 4px;
+    transition: 3s;
+}
+@-webkit-keyframes BuffTaken {
+0% {                
+    background-color:rgba(0, 255, 149,0.2);                
+}
+30% {
+    background-color:rgba(255, 40, 40, 0.596);         
+}
+100% {                
+    background-color:rgba(0, 255, 149,0.2); ;                
+}
+}
+            /*For Edge*/                            @keyframes BuffTaken {
+                                                    0% {                
+                                                        background-color:rgba(0, 255, 149,0.2);                
+                                                    }
+                                                    30% {
+                                                        background-color:rgba(255, 40, 40, 0.596);         
+                                                    }
+                                                    100% {                
+                                                        background-color:rgba(0, 255, 149,0.2); ;                
+                                                    }
+                                                    }

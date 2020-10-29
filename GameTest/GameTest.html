@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GameTest</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="STYLE_ANCHOR.css" />
+        <link rel="stylesheet" type="text/css" href="GameStyle.css" />
+        <style>
+            .left{width: 250px;
+                height: 100%;
+                background: rgba(219, 191, 252, 0.144);
+                position: fixed;
+                top: 0;
+                left: 0px;
+            }
+        </style>
+      <script type="text/javascript" src="GameFunctions.js" ></script>
+      <script type="text/javascript" src="PlayerMovement.js" ></script>
+      <script type="text/javascript" src="ItemsFunction.js" ></script>
+    </head>
+    <body onload="Check(Target,Player)">
+        <div id="infor">
+            <div class="AroundFixed"
+            style="
+            
+            left: 80px;
+            position: relative;
+            "
+                       >
+          ⚘ 
+       </div>
+            <div class="left">
+                
+                <div class="itemsOut">
+                    
+                   
+                        <b class="ItemsText">GameTest</b>
+                   
+                </div>
+                <div class="items" >
+                    <a  class="ItemsText"
+                        href="My_Homepage.html"
+                    >
+                        <b>Homepage</b>
+                    </a>
+                </div>
+                
+                <div class="items" id="count"
+                 style="font-family: fantasy;
+                        font-size: 20px;
+                        text-align: center;
+                        background-color: #00000000;
+                        border: rgba(215, 237, 255, 0.349) solid 0.05px;
+                        ">
+                    
+                        0
+                    
+                </div>
+                <div class="items" id="BuffName"
+                 style="font-family: fantasy;
+                        font-size: 20px;
+                        text-align: center;
+                        background-color: #00000000;
+                        border: rgba(215, 237, 255, 0.349) solid 0.05px;
+                        ">
+                    
+                        None
+                    
+                </div>
+                <div class="items" id="TimeCounter"
+                 style="font-family: fantasy;
+                        font-size: 20px;
+                        text-align: center;
+                        background-color: #00000000;
+                        border: rgba(215, 237, 255, 0.349) solid 0.05px;
+                        ">
+                <div class="DivCounter"></div>
+                <div class="DivCounter"></div>
+                <div class="DivCounter"></div>
+                <div class="DivCounter"></div>
+                <div class="DivCounter"></div>
+                
+
+                        
+                    
+                </div>
+               
+                <div class="ToolItems"
+                    >
+                    <a  class="ItemsText"
+                        href="GameTest.html"
+                        
+                    >
+                        <p style="text-align: center;"><b>Refresh</b></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /*End of LeftGuider*/ -->
+        <script type="text/javascript">
+        //NPC&ITEMS MOVEMENT
+
+
+setInterval(function(){if(cnt>=0){
+                    Death.style.left = Math.floor(Math.random()*900)+"px";
+                    Death.style.top = Math.floor(Math.random()*700)+"px";}}, 1500*Slo);
+setInterval(function(){if(cnt>=5){
+                    Death2.style.left = Math.floor(Math.random()*900)+"px";
+                    Death2.style.top = Math.floor(Math.random()*700)+"px";}},1200*Slo);
+setInterval(function(){if(cnt>=10){
+                    Death3.style.left = Math.floor(Math.random()*900)+"px";
+                    Death3.style.top = Math.floor(Math.random()*700)+"px";}},900*Slo);
+setInterval(function(){if(cnt>=15){
+                    Death4.style.left = Math.floor(Math.random()*900)+"px";
+                    Death4.style.top = Math.floor(Math.random()*700)+"px";}},600*Slo);
+setInterval(function(){if(cnt>=20){
+                    Death5.style.left = Math.floor(Math.random()*900)+"px";
+                    Death5.style.top = Math.floor(Math.random()*700)+"px";}},300*Slo);
+setInterval(function(){
+                    LightenFlag+=1;
+},20000);
+setInterval(function(){
+                    LightenFlag-=1;
+},20500);
+setInterval(function(){
+                    if(LightenFlag){
+                        Death.style.background="rgba(235, 35, 75, 0.9)";
+                    }
+                    else{
+                        Death.style.background="rgba(220, 20, 60, 0.438)";
+                    }
+},100)
+setInterval(function(){if(cnt>=30){
+                    if(!(Buff)){
+                    Protection.style.left=Math.floor(Math.random()*800)+"px";
+                    Protection.style.left=Math.floor(Math.random()*700)+"px";
+                    
+                    }
+                    
+                    }},Math.random()*18000+35000);
+setInterval(function(){if(cnt>=15){
+                    if(!(Buff)){
+                    Double.style.left=Math.floor(Math.random()*800)+"px";
+                    Double.style.left=Math.floor(Math.random()*700)+"px";
+                    
+                    }
+                    
+                    }},Math.random()*12000+15000);
+setInterval(function(){if(cnt>=40){
+                    if(!(Buff)){
+                    Lighten.style.left=Math.floor(Math.random()*800)+"px";
+                    Lighten.style.left=Math.floor(Math.random()*700)+"px";
+                    
+                    }
+                    
+                    }},Math.random()*12000+45000);
+//Items&Player Collision
+
+
+
+
+
+
+            setInterval(function(){
+                if(IfCollision(Player,Target)){
+                    Target.style.left = Math.floor(Math.random()*900)+"px";
+                    Target.style.top = Math.floor(Math.random()*700)+"px";
+                    cnt+=pPoint;
+                    document.getElementById('count').innerHTML=cnt;
+                }
+            }, 500);
+            setInterval(function(){
+                if(IfCollision(Player,Death)&&!(Pro)){
+                    Player.style.background = "rgba(220, 20, 60, 0.438)";
+                    Playground.style.background = "rgba(220, 20, 60, 0.438)";
+                    document.getElementById('Playground').innerHTML="You Died";  
+                }
+                if(IfCollision(Player,Death)&&Pro){
+                   Pro=false;
+                }
+            }, 500);
+            setInterval(function(){
+                if(IfCollision(Player,Protection)){
+                    Protection.style.top ='-200px';
+                    Protection.style.left ='-200px';
+                    cnt+=5;
+                    Pro=true;
+                    document.getElementById('count').innerHTML=cnt; 
+                      
+                }
+                if(Buff){
+                        Protection.style.top ='-200px';
+                        Protection.style.left ='-200px';
+                    }
+            }, 100);
+            setInterval(function(){
+                if(IfCollision(Player,Double)){
+                    Double.style.top ='-200px';
+                    Double.style.left ='-200px';
+                    cnt+=5;
+                    Dbl=true;
+                    pPoint=2;
+                    document.getElementById('count').innerHTML=cnt;  
+                }
+                if(Buff){
+                        Double.style.top ='-200px';
+                        Double.style.left ='-200px';
+                    }
+            }, 100);
+            setInterval(function(){
+                if(IfCollision(Player,Lighten)){
+                    Lighten.style.top ='-200px';
+                    Lighten.style.left ='-200px';
+                    cnt+=5;
+                    Lit=true;
+                    LightenFlag+=1;
+
+                    // Death.style.background="rgba(220, 20, 60, 0.438)";
+                    document.getElementById('count').innerHTML=cnt;  
+                }
+                if(Buff){
+                        Lighten.style.top ='-200px';
+                        Lighten.style.left ='-200px';
+                    }
+            }, 100);
+            setInterval(function(){
+                if(Pro){
+                    Player.style.width="80px";
+                    Player.style.height="80px";
+                    Player.style.fontSize="55px";
+                    Slo=0.05;
+                }
+                else{
+                    Player.style.width="60px";
+                    Player.style.height="60px";
+                    Player.style.fontSize="40px";
+                    Slo=1;
+                }
+            }, 500);
+            setInterval(function(){
+                if(Dbl){
+                    Player.style.backgroundColor="rgba(255, 240, 23, 0.4)";
+                    
+                }
+                else{
+                    Player.style.backgroundColor="rgba(0, 255, 149,0.2)";    
+                }
+            }, 500);
+            
+            alert("1.和🤪接触0.5s内得一分\n2.和第一个💀接触0.5s内死亡\n3.每五分会增加一个虚假的不会致死的💀\n4.致死的💀会定时闪烁\n5.尝试获得最高分（目前是136）\n6.改进了边界问题，多了几类buff（得到一定分数才会在随机时间段出现）");
+            Movement(); 
+            TimeCounter(3000);
+            setInterval(()=>{
+                Over();
+            },100);
+            </script>
+        <div class="mainbody"
+             id="Playground"
+             style="text-align: center;
+                    color: white;
+                    font-family: fantasy;
+                    font-size: 50px;
+        ">
+             
+                <div
+                 id="Player"
+                style="
+                border: 2px #e0e0e0 solid;
+                text-align: center;
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                animation:aRotate 4s infinite;
+                line-height:px;
+                font-size: 40px;
+                position:relative;
+                left: 420px;
+                top:260px;
+                background-color: rgba(0, 255, 170, 0.226);
+                "                           
+                >
+                ⚘ 
+                </div>
+           
+                <div class="AroundFixed"
+                id="Target"
+                style="
+                left: 590px;
+                top:380px;
+                transition: 2s;
+                background-color: rgba(0, 255, 255, 0.479);
+                position: relative;
+                animation:aRotate 2s infinite;
+                "
+                >
+                🤪 
+                </div>
+       
+            <div class="Death"
+            id="Death"
+            style="
+            left: 500px;
+            top:230px;
+            "
+            >
+            💀 
+            </div>
+        
+     
+            <div class="Death"
+            id="Death2"
+            >
+            💀 
+            </div>
+            <div class="Death"
+            id="Death3"
+            >
+            💀 
+            </div>
+            <div class="Death"
+            id="Death4"
+            >
+            💀 
+            </div>
+            <div class="Death"
+            id="Death5"
+            >
+            💀 
+            </div>
+            <div class="Random"
+            id="Protection"
+            >
+            🥥
+            </div>
+            <div class="Random"
+            id="Double"
+            style="background-color: rgba(255, 240, 23, 0.4);"
+            >
+            🐾
+            </div>
+            <div class="Random"
+            id="Lighten"
+            style="background-color: rgba(255, 23, 23, 0.568);"
+            >
+            👁‍🗨
+            </div>        
+        
+       
+    </body>
+</html>

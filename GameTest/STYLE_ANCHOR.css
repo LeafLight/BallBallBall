@@ -1,0 +1,425 @@
+body{
+    background-image: url(Building.jpg);
+ }
+
+.items{
+
+    width:215px;
+    height: 30px;
+    position: relative;
+    top: 80px;
+    cursor:pointer;
+    background-color: #12a5e969;
+    box-shadow:4px 4px 0px #ffffff91;
+    margin: 12px;
+    left:0px;
+    transition:0.3s;
+} 
+.items:hover{
+        left:2px;
+        box-shadow:4px 4px 0px #ffffffc1;
+    
+}
+.ToolItems{
+        background-color: rgba(205, 205, 253, 0.062);
+                    border: rgba(179, 179, 180, 0.692) solid 3px;
+                    height:70px;
+                    width:215px;
+                    position: relative;
+                    top: 80px;
+                    cursor:pointer; 
+                    box-shadow:4px 4px 0px #ffffff91;
+                    margin: 12px;
+                    left:0px;
+}
+div.itemsOut{
+       margin: 20px;
+position: relative;
+ left: 4px;
+  top: 72px;
+   width: 240px;
+    height: 40px;
+    text-shadow: 4px 4px 0px rgba(255,255,255,0.3);
+    background-color: rgba(81, 167, 247, 0.548);
+                                                
+       box-shadow:8px 8px rgba(249, 237, 250, 0.397);
+ }
+ .ToolItems{
+    background-color: rgba(205, 205, 253, 0.062);
+                border: rgba(179, 179, 180, 0.692) solid 3px;
+                height:70px;
+                width:215px;
+                position: relative;
+                top: 80px;
+                cursor:pointer; 
+                box-shadow:4px 4px 0px #ffffff91;
+                margin: 12px;
+                left:0px;
+}
+.SelectionItems{
+
+    width:215px;
+    height: 30px;
+    position: relative;
+    top: 80px;
+    cursor:pointer;
+    background-color: #12a5e900;
+   
+    border: rgba(215, 237, 255, 0.349) solid 0.05px;
+    box-shadow:4px 4px 0px #ffffff91;
+    margin: 12px;
+    left:0px;
+    transition:0.3s;
+    animation: OnloadHilightForSelectionItems 3s;
+} 
+
+
+.around{
+     width: 100px;
+     height: 100px;
+     border-radius: 100%;
+     transition:1s;
+    
+     font-size: 80px;
+     
+     -webkit-animation: aRotate 1s;
+     animation: aRotate 1s;
+ }
+ .AroundFixed{
+    border: 2px #e0e0e0 solid;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    transition:1s;
+    line-height:px;
+    font-size: 40px;
+    position:fixed;
+    -webkit-animation: aRotate 1s;
+    animation: aRotate 1s;
+}
+#infor:hover .AroundFixed{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    -webkit-animation: aAntiRotate 1s;/*For Edge*/animation: aAntiRotate 1s;
+    -webkit-transform: rotate(-180deg);/*For Edge*/transform: rotate(-180deg);
+    background-color: #005a8342;
+    font-size: 40px;
+}  
+.left{width: 250px;
+     height: 100%;
+     background: rgba(219, 191, 252, 0.144);
+     position: absolute;
+     top: 0;
+     left: -190px;
+     transition: all 0.9s;
+             }
+.logo{
+     position:absolute;
+     margin:200px;
+     top:20px;
+     left:250px;
+     color: white;
+     font-size:80px;
+     font-family:'Times New Roman', Times, serif;
+     letter-spacing: 42px;
+     text-shadow:0px 0px 1px #ffffff51;
+ }
+
+
+
+
+ div.search{
+     position: absolute;
+     margin:200px;
+     top:160px;
+     left:250px;
+ }
+ input.search{
+     height:40px;
+     width:450px;
+     border-radius: 4px;
+     background:transparent;
+     border:1.5px solid #ffffff;
+     color:white;
+     float: right;
+     font-size: 24px;
+     
+ }
+
+ label.search{
+     font-family: fantasy;
+     letter-spacing: 3px;
+ }
+ button.search{
+     
+     color:white;
+     background-color: rgba(61, 159, 240,0.4);
+     cursor:pointer;
+     outline: none; 
+     border-color: rgb(59, 177, 245);
+     float: right;
+ }
+ button.search:hover{
+     text-shadow: 0px 0px 2px rgba(255,255,255,0.5);
+ }
+ button.cypher{
+     
+    color:rgba(255, 255, 255, 0.918);
+    background-color: rgba(61, 159, 240, 0.233);
+    cursor:pointer;
+    outline: none; 
+    border-color: rgba(59, 177, 245, 0);
+    width: 120px;
+    height: 40px;
+    font-size: 25px;
+    position: relative;left: 140px;
+    font-family: monospace;
+    transition: 0.3s;
+}
+button.cypher:hover{
+    background-color:rgba(61, 159, 240, 0.377);
+    border-color: rgba(59, 177, 245, 0.144);
+}
+button.exchange{
+     
+    color:rgba(29, 76, 114, 0.733);
+    background-color: rgba(248, 248, 248, 0.685);
+    cursor:pointer;
+    outline: none; 
+    border-color: rgba(59, 177, 245, 0);
+    width: 30px;
+    height: 40px;
+    font-size: 25px;
+    position: relative;left: 140px;
+    font-family: monospace;
+    transition: 0.3s;
+}
+button.exchange:hover{
+    background-color:rgb(255, 255, 255);
+    border-color: rgba(59, 177, 245, 0.144);
+}
+
+ #infor{
+     width: 200px;color:rgb(255, 255, 255);
+ }
+ 
+ #infor:hover .left{
+     left:0;
+              }
+ #infor:hover .around{
+     width: 60px;
+     height: 60px;
+     border-radius: 100%;
+     -webkit-animation: aAntiRotate 1s;/*For Edge*/animation: aAntiRotate 1s;
+     -webkit-transform: rotate(-180deg);/*For Edge*/transform: rotate(-180deg);
+     background-color: #005a8342;
+     font-size: 40px;
+ }
+ 
+@-webkit-keyframes aRotate {
+         from {                
+         -webkit-transform:rotate(0deg);                
+     }
+     to {
+         border-radius: 100%;
+         -webkit-transform:rotate(360deg);         
+     }
+}
+                 /*For Edge*/                            @keyframes aRotate {
+                                                         from {                
+                                                         -webkit-transform:rotate(0deg);                
+                                                     }
+                                                     to {
+                                                         border-radius: 100%;
+                                                         -webkit-transform:rotateZ(360deg);         
+                                                     }
+                                             }
+@-webkit-keyframes aAntiRotate{
+         from{
+         -webkit-transform: rotate(0deg);
+         }
+         to{
+         -webkit-transform: rotate(-180deg);
+         }
+}       
+                 /*For Edge*/                            @keyframes aAntiRotate{ 
+                                                         from{
+                                                         -webkit-transform: rotate(0deg);
+                                                         }
+                                                         to{
+                                                         -webkit-transform: rotate(-180deg);
+                                                         }
+                                             } 
+ @-webkit-keyframes OnloadHilightForSelectionItems {
+    0% {                
+        background-color: #00000000;
+                            
+            }
+    25% {
+        background-color: rgba(54, 255, 171, 0.651); 
+                                     
+            }
+    100%{
+        background-color: #00000000;
+                            
+            }
+                            }
+                 /*For Edge*/   
+                                                        @keyframes OnloadHilightForSelectionItems {
+                                                        0% {                
+                                                            background-color: #00000000;
+                                                                                
+                                                                }
+                                                        25% {
+                                                            background-color: rgba(54, 255, 171, 0.658); 
+                                                                                        
+                                                                }
+                                                        100%{
+                                                            background-color: #00000000;
+                                                                                
+                                                                }
+                                                            }
+
+@-webkit-keyframes OnloadHilightForTextarea {
+    0% {                
+        background-color: rgba(0, 0, 255, 0.041);;
+                            
+            }
+    30% {
+        background-color: rgba(0, 204, 255, 0.33); 
+                                     
+            }
+    100%{
+        background-color: rgba(0, 0, 255, 0.041);;
+                            
+            }
+                            }
+                 /*For Edge*/   
+                                                        @keyframes OnloadHilightForTextarea {
+                                                        0% {                
+                                                            background-color: rgba(0, 0, 255, 0.041);;
+                                                                                
+                                                                }
+                                                        30% {
+                                                            background-color:rgba(0, 204, 255, 0.33);
+                                                                                        
+                                                                }
+                                                        100%{
+                                                            background-color: rgba(0, 0, 255, 0.041);;
+                                                                                
+                                                                }
+                                                            }
+  .mainbody
+  {
+      position: absolute;
+      left: 310px;
+      top:12px;
+      margin: 0px;
+      width: 75%;
+      height: 96%;
+      background-color: #12a5e902; 
+      overflow-y:scroll;
+      border:solid rgba(167, 167, 241, 0.233);
+      border-radius: 10px;
+      padding-right: 20px;
+      
+  }
+  .mainbody::after {
+    background-image: url(Building.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    -o-filter: blur(20px);
+    filter: blur(20px);
+}
+
+  .mainbody::-webkit-scrollbar
+  {
+      width: 10px;
+      background-color: rgba(0, 140, 255, 0.034);
+      border-radius: 4px;
+      position: relative;
+      
+      
+  }  
+  .mainbody::-webkit-scrollbar-thumb
+  {   
+      height: auto;
+      background-color: rgba(0, 102, 255, 0.26);	
+      background-image: -webkit-linear-gradient(45deg,
+                                                transparent 25%,
+                                                transparent 50%,
+                                                rgba(255, 255, 255, .2) 50%,
+                                                rgba(255, 255, 255, .2) 75%,
+                                                transparent 75%,
+                                                transparent)
+  }
+
+
+
+
+
+.ItemsText{color: #ffffff;
+    text-shadow: 4px 4px 0px rgba(255,255,255,0.15);
+    text-decoration:none;
+    font-size: 22px;
+    font-family:'cursive';}
+.ItemsText:hover{color: #ffffff;
+    text-shadow: -4px -4px 0px rgba(255,255,255,0.5);
+    text-shadow:-2px -2px 5px #ffffff;
+    
+}            
+.TextLink{
+    color:white;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    margin:10px;
+    line-height: 200%;
+    border: solid 4px transparent;
+    border-radius:4px;
+    transition:0.2s;
+    background-color: #296fca56;
+    position: relative;
+    left: 30px;
+    top: 35px;
+    }
+.TextLink:hover{ 
+                  
+                  border: solid 2.5px rgba(255, 255, 255, 0.412);
+                  border-radius:6px;
+                  text-shadow: 1px 1px 1px rgba(255,255,255,0.20);
+                  color: rgb(215, 237, 255);
+}
+.CypherText{
+    border-radius: 0px 2px 32px 0px;
+    color: rgb(0, 255, 149);
+    background-color: rgba(0, 0, 255, 0.041);
+    outline:none;
+    transition: 0.5s;
+    font-size: 14px;
+    border-color: rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.527);
+    animation: OnloadHilightForTextarea 3.6s;
+}
+.CypherText:hover{
+    background-color: rgba(0, 204, 255, 0.13);
+}
+textarea.key{
+    position: relative;
+        left: 0px;
+        top:10px;
+    background-color: rgba(0, 0, 255, 0.041);
+    height: 30px;
+    color: rgb(0, 255, 149);
+    font-size: 25px; 
+    outline:none;
+    transition: 0.3s;
+    border-radius: 0px 2px 12px 0px;
+    resize:none;
+    
+}
